@@ -5,16 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef6282a1-765d-41b4-a858-32cf89b843dd" name="Changes" comment="List comprehension and Pandan Librbary examples (with Miuul)">
-      <change afterPath="$PROJECT_DIR$/Py100DaysOfCode_Course/ceasar_ciphering/art.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Py100DaysOfCode_Course/ceasar_ciphering/ceasar_ciphering.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Py100DaysOfCode_Course/hangman/hangman.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Py100DaysOfCode_Course/hangman/hangman_art.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Py100DaysOfCode_Course/hangman/hangman_words.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Py100DaysOfCode_Course/pwd_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Py100DaysOfCode_Course/rock_paper_scissors_game.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Py100DaysOfCode_Course/find_prime_num.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python4E/dict_hist_email_sender.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python4E/files.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python4E/http.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python4E/list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python4E/msg_hour_tuple.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python4E/regular_expr.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python4E/sockets.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python4E/webpage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python_DataScience_and_ML_Course/Py-DS-ML-Bootcamp-master/02-Python-for-Data-Analysis-NumPy/01-NumPy Arrays.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Python_DataScience_and_ML_Course/Py-DS-ML-Bootcamp-master/02-Python-for-Data-Analysis-NumPy/01-NumPy Arrays.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python_DataScience_and_ML_Course/Py-DS-ML-Bootcamp-master/02-Python-for-Data-Analysis-NumPy/04-Numpy Exercises.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Python_DataScience_and_ML_Course/Py-DS-ML-Bootcamp-master/02-Python-for-Data-Analysis-NumPy/04-Numpy Exercises.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,19 +43,17 @@
     &quot;state&quot;: &quot;OPEN&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="e3f10b38-c255-465e-8c8a-84fc28ce69aa" />
-        <option name="url" value="https://github.com/erhyilmaz/PythonRepo.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/erhanyilmazphd/PythonRepo.git&quot;,
+    &quot;accountId&quot;: &quot;f07e25c2-c169-44df-b316-7273ea45d7f5&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -68,29 +66,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Python.camera_capture.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ceasar_ciphering.executor&quot;: &quot;Run&quot;,
-    &quot;Python.deneme.executor&quot;: &quot;Run&quot;,
-    &quot;Python.fft.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.fft_data.executor&quot;: &quot;Run&quot;,
-    &quot;Python.forecasting_nonstationary_time_series.executor&quot;: &quot;Run&quot;,
-    &quot;Python.gradient_decent.executor&quot;: &quot;Run&quot;,
-    &quot;Python.hangman.executor&quot;: &quot;Run&quot;,
-    &quot;Python.pwd_generator.executor&quot;: &quot;Run&quot;,
-    &quot;Python.rock_paper_scissors_game.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ToolWindowGit.ShowToolbar&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/erhyilmaz/work/learning/PythonProgramming/PythonRepo/DSP/FFT/fft.py&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Python.camera_capture.executor": "Run",
+    "Python.ceasar_ciphering.executor": "Run",
+    "Python.deneme.executor": "Run",
+    "Python.dict_hist_email_sender.executor": "Debug",
+    "Python.fft.executor": "Run",
+    "Python.fft_data.executor": "Run",
+    "Python.files.executor": "Debug",
+    "Python.find_prime_num.executor": "Run",
+    "Python.forecasting_nonstationary_time_series.executor": "Run",
+    "Python.gradient_decent.executor": "Run",
+    "Python.hangman.executor": "Run",
+    "Python.http.executor": "Run",
+    "Python.list.executor": "Debug",
+    "Python.msg_hour_tuple.executor": "Debug",
+    "Python.pwd_generator.executor": "Run",
+    "Python.regular_expr.executor": "Run",
+    "Python.rock_paper_scissors_game.executor": "Run",
+    "Python.sockets.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ToolWindowGit.ShowToolbar": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/erhyilmaz/work/learning/PythonProgramming/PythonRepo/DSP/FFT/fft.py",
+    "run.code.analysis.last.selected.profile": "aDefault",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings module-name="PythonRepo" is-module-sdk="true">
@@ -109,7 +115,7 @@
       <recent name="$PROJECT_DIR$/PythonSeleniumCourse/course_examples/Libraries_and_Modules" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.fft">
+  <component name="RunManager">
     <configuration name="exam_scores_dataframe" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonRepo" />
       <option name="ENV_FILES" value="" />
@@ -155,6 +161,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="list" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PythonRepo" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python4E" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python4E/list.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="pandas_example" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonRepo" />
       <option name="ENV_FILES" value="" />
@@ -177,8 +205,32 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="regular_expr" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PythonRepo" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python4E" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python4E/regular_expr.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.regular_expr" />
+        <item itemvalue="Python.list" />
         <item itemvalue="Python.exam_scores_dataframe" />
         <item itemvalue="Python.pandas_example" />
       </list>
@@ -187,7 +239,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-50da183f06c8-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.13135.95" />
+        <option value="bundled-python-sdk-98f27166c754-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.21829.153" />
       </set>
     </attachedChunks>
   </component>
@@ -367,39 +419,8 @@
     <option featureType="dependencySupport" implementationName="executable:docker" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="OPEN_GENERIC_TABS">
-      <map>
-        <entry key="929d2957-f12e-4eb7-ba74-98c5f6e3b006" value="TOOL_WINDOW" />
-        <entry key="cf81301f-e359-4273-bf33-0e043b4d9119" value="TOOL_WINDOW" />
-      </map>
-    </option>
     <option name="TAB_STATES">
       <map>
-        <entry key="929d2957-f12e-4eb7-ba74-98c5f6e3b006">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="HEAD" />
-                      </list>
-                    </value>
-                  </entry>
-                  <entry key="structure">
-                    <value>
-                      <list>
-                        <option value="dir:/home/erhyilmaz/work/learning/PythonProgramming/PythonRepo/Python3_DeepDive-Part1" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
-            </State>
-          </value>
-        </entry>
         <entry key="MAIN">
           <value>
             <State>
@@ -421,31 +442,6 @@
                   </entry>
                 </map>
               </option>
-            </State>
-          </value>
-        </entry>
-        <entry key="cf81301f-e359-4273-bf33-0e043b4d9119">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="HEAD" />
-                      </list>
-                    </value>
-                  </entry>
-                  <entry key="roots">
-                    <value>
-                      <list>
-                        <option value="$PROJECT_DIR$" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
             </State>
           </value>
         </entry>
