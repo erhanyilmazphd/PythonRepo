@@ -7,7 +7,7 @@ After the dictionary is produced, the program reads through the dictionary using
 
 name = input("Enter file:")
 if len(name) < 1:
-    name = "mbox-short.txt"
+    name = "./mbox-short.txt"
 fhandle = open(name)
 
 counts = dict()

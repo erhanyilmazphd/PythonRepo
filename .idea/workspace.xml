@@ -4,17 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef6282a1-765d-41b4-a858-32cf89b843dd" name="Changes" comment="List comprehension and Pandan Librbary examples (with Miuul)">
-      <change afterPath="$PROJECT_DIR$/Py100DaysOfCode_Course/find_prime_num.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Python4E/dict_hist_email_sender.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Python4E/files.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Python4E/http.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Python4E/list.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Python4E/msg_hour_tuple.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Python4E/regular_expr.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Python4E/sockets.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Python4E/webpage.py" afterDir="false" />
+    <list default="true" id="ef6282a1-765d-41b4-a858-32cf89b843dd" name="Changes" comment="Py4E course examples">
+      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python4E/count_org_db_hw.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python4E/email_database.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python4E/geoloc_api_hw.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python4E/json_ex1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python4E/json_ex2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python4E/json_hw.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python4E/links_hw.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python4E/oop_class_ex1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python4E/oop_class_ex2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python4E/oop_inheritence_ex.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python4E/opengeo_ex.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python4E/webScraping.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python4E/webScraping_hw.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python4E/xml_ex1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python4E/xml_ex2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python4E/xml_hw.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python4E/dict_hist_email_sender.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python4E/dict_hist_email_sender.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python4E/http.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python4E/http_ex.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python4E/list.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python4E/list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python4E/sockets.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python4E/sockets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python4E/webpage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python4E/webpage.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,28 +84,45 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Python.camera_capture.executor": "Run",
     "Python.ceasar_ciphering.executor": "Run",
+    "Python.count_org_db_hw.executor": "Run",
     "Python.deneme.executor": "Run",
-    "Python.dict_hist_email_sender.executor": "Debug",
+    "Python.dict_hist_email_sender.executor": "Run",
+    "Python.email_database.executor": "Run",
     "Python.fft.executor": "Run",
     "Python.fft_data.executor": "Run",
     "Python.files.executor": "Debug",
     "Python.find_prime_num.executor": "Run",
     "Python.forecasting_nonstationary_time_series.executor": "Run",
+    "Python.geoloc_api_hw.executor": "Run",
     "Python.gradient_decent.executor": "Run",
     "Python.hangman.executor": "Run",
     "Python.http.executor": "Run",
-    "Python.list.executor": "Debug",
+    "Python.json_ex1.executor": "Run",
+    "Python.json_ex2.executor": "Run",
+    "Python.json_hw.executor": "Run",
+    "Python.links_hw.executor": "Run",
+    "Python.list.executor": "Run",
     "Python.msg_hour_tuple.executor": "Debug",
+    "Python.oop_class_ex1.executor": "Run",
+    "Python.oop_class_ex2.executor": "Run",
+    "Python.oop_inheritence_ex.executor": "Run",
+    "Python.opengeo_ex.executor": "Run",
     "Python.pwd_generator.executor": "Run",
     "Python.regular_expr.executor": "Run",
     "Python.rock_paper_scissors_game.executor": "Run",
     "Python.sockets.executor": "Run",
+    "Python.webScraping.executor": "Run",
+    "Python.webScraping_hw.executor": "Run",
+    "Python.webpage.executor": "Run",
+    "Python.xml_ex1.executor": "Run",
+    "Python.xml_ex2.executor": "Run",
+    "Python.xml_hw.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ToolWindowGit.ShowToolbar": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/erhyilmaz/work/learning/PythonProgramming/PythonRepo/DSP/FFT/fft.py",
+    "last_opened_file_path": "/home/erhan/work/learning/PythonProgramming/PythonRepo",
     "run.code.analysis.last.selected.profile": "aDefault",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
@@ -116,29 +146,8 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="exam_scores_dataframe" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="PythonRepo" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/cv2" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cv2/exam_scores_dataframe.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="fft" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -147,12 +156,11 @@
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="SDK_NAME" value="Python 3.10" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DSP/FFT" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DSP/FFT/fft.py" />
+      <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -161,80 +169,131 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="list" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration default="true" type="Tox" factoryName="Tox">
       <module name="PythonRepo" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python4E" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="SDK_HOME" value="/usr/bin/python3.10" />
+      <option name="SDK_NAME" value="Python 3.10" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python4E/list.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <arguments>
+        <array />
+      </arguments>
+      <runOnlyEnvs>
+        <array />
+      </runOnlyEnvs>
       <method v="2" />
     </configuration>
-    <configuration name="pandas_example" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration default="true" type="docs" factoryName="Docutils task">
       <module name="PythonRepo" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python_DataAnalysis/Pandas" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="SDK_HOME" value="/usr/bin/python3.10" />
+      <option name="SDK_NAME" value="Python 3.10" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python_DataAnalysis/Pandas/pandas_example.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="docutils_input_file" value="" />
+      <option name="docutils_output_file" value="" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="rst2html" />
+      <option name="docutils_open_in_browser" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="regular_expr" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration default="true" type="docs" factoryName="Sphinx task">
       <module name="PythonRepo" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python4E" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="SDK_HOME" value="/usr/bin/python3.10" />
+      <option name="SDK_NAME" value="Python 3.10" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python4E/regular_expr.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="docutils_input_file" value="" />
+      <option name="docutils_output_file" value="" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="html" />
+      <option name="docutils_open_in_browser" value="false" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.regular_expr" />
-        <item itemvalue="Python.list" />
-        <item itemvalue="Python.exam_scores_dataframe" />
-        <item itemvalue="Python.pandas_example" />
-      </list>
-    </recent_temporary>
+    <configuration default="true" type="tests" factoryName="Autodetect">
+      <module name="PythonRepo" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.10" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <module name="PythonRepo" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="/usr/bin/python3.10" />
+      <option name="SDK_NAME" value="Python 3.10" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Twisted Trial">
+      <module name="PythonRepo" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="/usr/bin/python3.10" />
+      <option name="SDK_NAME" value="Python 3.10" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <module name="PythonRepo" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.10" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -412,13 +471,36 @@
       <option name="project" value="LOCAL" />
       <updated>1695065547774</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Py4E course examples">
+      <option name="closed" value="true" />
+      <created>1726597437768</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1726597437769</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="UnknownFeatures">
     <option featureType="dependencySupport" implementationName="executable:docker" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -440,7 +522,27 @@
                       </list>
                     </value>
                   </entry>
+                  <entry key="date">
+                    <value>
+                      <list>
+                        <option value="1725993252601" />
+                        <option value="" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="user">
+                    <value>
+                      <list>
+                        <option value="*" />
+                      </list>
+                    </value>
+                  </entry>
                 </map>
+              </option>
+              <option name="TEXT_FILTER_SETTINGS">
+                <TextFilterSettings>
+                  <option name="MATCH_CASE" value="true" />
+                </TextFilterSettings>
               </option>
             </State>
           </value>
@@ -463,10 +565,18 @@
     <MESSAGE value="'''&#10;Python script which goes through files in Downloads folder, check their dates and if they are older than 10 days, move them to folder called to_delete&#10;'''" />
     <MESSAGE value="'''&#10;File open/close related methods. JSON, CSV files etc related trials&#10;'''" />
     <MESSAGE value="List comprehension and Pandan Librbary examples (with Miuul)" />
-    <option name="LAST_COMMIT_MESSAGE" value="List comprehension and Pandan Librbary examples (with Miuul)" />
+    <MESSAGE value="Py4E course examples" />
+    <option name="LAST_COMMIT_MESSAGE" value="Py4E course examples" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Python4E/webScraping.py</url>
+          <line>5</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">

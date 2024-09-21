@@ -8,7 +8,7 @@ When the program completes, sort and print the resulting words in python sort() 
 
 #fname = input("Enter file name: ")
 #fh = open(fname)
-fh = open("deneme.txt")
+fh = open("deneme.txt", "r+")
 
 lst = list()
 for line in fh:
