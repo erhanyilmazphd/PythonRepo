@@ -52,7 +52,7 @@ ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
 
 
-address = 'Georgia State University'
+address = 'Georgıa State Unıversıty'
 #address = 'South Federal University'
 
 #address = address.strip()
