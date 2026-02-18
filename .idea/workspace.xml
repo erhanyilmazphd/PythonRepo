@@ -5,11 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef6282a1-765d-41b4-a858-32cf89b843dd" name="Changes" comment="Py4E course examples">
-      <change afterPath="$PROJECT_DIR$/DSP/cubic_spline_natural.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Python4E/tracks/tracks_hw.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OFDM/ofdm_cfo_est.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OFDM/ofdm_cfo_sfo_ber.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OFDM/ofdm_impairments.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OFDM/ofdm_joint_cfo_sfo_est.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OFDM/ofdm_pilot_density.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OFDM/ofdm_sfo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OFDM/ofdm_sfo_v2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_automation/debugphy_per_vs_time_plot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_automation/loga6_1202.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_automation/logc6_1202.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_automation/variable_attenuator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/csv-editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python4E/geoloc_api_hw.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python4E/geoloc_api_hw.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FFT/fft_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/DSP/FFT/fft_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FFT/fft_input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DSP/FFT/fft_input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FFT/ifft_fft_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/DSP/FFT/ifft_fft_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python_DataScience_and_ML_Course/Py-DS-ML-Bootcamp-master/02-Python-for-Data-Analysis-NumPy/01-NumPy Arrays.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Python_DataScience_and_ML_Course/Py-DS-ML-Bootcamp-master/02-Python-for-Data-Analysis-NumPy/01-NumPy Arrays.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python_DataScience_and_ML_Course/Py-DS-ML-Bootcamp-master/13-Logistic-Regression/01-Logistic Regression with Python.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Python_DataScience_and_ML_Course/Py-DS-ML-Bootcamp-master/13-Logistic-Regression/01-Logistic Regression with Python.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Radar/aliasing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Radar/aliasing.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +34,9 @@
     <option name="groupingKeys">
       <option value="directory" />
     </option>
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="289" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -65,60 +82,73 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Python.camera_capture.executor": "Run",
-    "Python.ceasar_ciphering.executor": "Run",
-    "Python.count_org_db_hw.executor": "Run",
-    "Python.cubic_spline_natural.executor": "Run",
-    "Python.deneme.executor": "Run",
-    "Python.dict_hist_email_sender.executor": "Run",
-    "Python.email_database.executor": "Run",
-    "Python.extract-translate-headers.executor": "Run",
-    "Python.fft.executor": "Run",
-    "Python.fft_data.executor": "Run",
-    "Python.files.executor": "Debug",
-    "Python.find_prime_num.executor": "Run",
-    "Python.forecasting_nonstationary_time_series.executor": "Run",
-    "Python.geoloc_api_hw.executor": "Run",
-    "Python.gradient_decent.executor": "Run",
-    "Python.hangman.executor": "Run",
-    "Python.http.executor": "Run",
-    "Python.json_ex1.executor": "Run",
-    "Python.json_ex2.executor": "Run",
-    "Python.json_hw.executor": "Run",
-    "Python.links_hw.executor": "Run",
-    "Python.list.executor": "Run",
-    "Python.msg_hour_tuple.executor": "Debug",
-    "Python.oop_class_ex1.executor": "Run",
-    "Python.oop_class_ex2.executor": "Run",
-    "Python.oop_inheritence_ex.executor": "Run",
-    "Python.opengeo_ex.executor": "Run",
-    "Python.pwd_generator.executor": "Run",
-    "Python.python-chatgpt.executor": "Run",
-    "Python.regular_expr.executor": "Run",
-    "Python.rock_paper_scissors_game.executor": "Run",
-    "Python.sockets.executor": "Run",
-    "Python.tracks.executor": "Run",
-    "Python.webScraping.executor": "Run",
-    "Python.webScraping_hw.executor": "Run",
-    "Python.webpage.executor": "Run",
-    "Python.xml_ex1.executor": "Run",
-    "Python.xml_ex2.executor": "Run",
-    "Python.xml_hw.executor": "Run",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ToolWindowGit.ShowToolbar": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/erhan/work/learning/MachineLearning",
-    "run.code.analysis.last.selected.profile": "aDefault",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Python.camera_capture.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ceasar_ciphering.executor&quot;: &quot;Run&quot;,
+    &quot;Python.count_org_db_hw.executor&quot;: &quot;Run&quot;,
+    &quot;Python.cubic_spline_natural.executor&quot;: &quot;Run&quot;,
+    &quot;Python.debugphy_per_vs_time_plot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.deneme.executor&quot;: &quot;Run&quot;,
+    &quot;Python.dict_hist_email_sender.executor&quot;: &quot;Run&quot;,
+    &quot;Python.email_database.executor&quot;: &quot;Run&quot;,
+    &quot;Python.extract-translate-headers.executor&quot;: &quot;Run&quot;,
+    &quot;Python.fft.executor&quot;: &quot;Run&quot;,
+    &quot;Python.fft_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.fft_ifft.executor&quot;: &quot;Run&quot;,
+    &quot;Python.files.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.find_prime_num.executor&quot;: &quot;Run&quot;,
+    &quot;Python.forecasting_nonstationary_time_series.executor&quot;: &quot;Run&quot;,
+    &quot;Python.geoloc_api_hw.executor&quot;: &quot;Run&quot;,
+    &quot;Python.gradient_decent.executor&quot;: &quot;Run&quot;,
+    &quot;Python.hangman.executor&quot;: &quot;Run&quot;,
+    &quot;Python.http.executor&quot;: &quot;Run&quot;,
+    &quot;Python.json_ex1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.json_ex2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.json_hw.executor&quot;: &quot;Run&quot;,
+    &quot;Python.links_hw.executor&quot;: &quot;Run&quot;,
+    &quot;Python.list.executor&quot;: &quot;Run&quot;,
+    &quot;Python.msg_hour_tuple.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.new.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ofdm_cfo_est.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ofdm_cfo_sfo_ber.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ofdm_impairments.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ofdm_joint_cfo_sfo_est.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ofdm_pilot_density.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ofdm_sfo.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ofdm_sfo_v2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.oop_class_ex1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.oop_class_ex2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.oop_inheritence_ex.executor&quot;: &quot;Run&quot;,
+    &quot;Python.opengeo_ex.executor&quot;: &quot;Run&quot;,
+    &quot;Python.plot_debug_phy_per.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pwd_generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.python-chatgpt.executor&quot;: &quot;Run&quot;,
+    &quot;Python.regular_expr.executor&quot;: &quot;Run&quot;,
+    &quot;Python.rock_paper_scissors_game.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sockets.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tracks.executor&quot;: &quot;Run&quot;,
+    &quot;Python.variable_attenuator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.webScraping.executor&quot;: &quot;Run&quot;,
+    &quot;Python.webScraping_hw.executor&quot;: &quot;Run&quot;,
+    &quot;Python.webpage.executor&quot;: &quot;Run&quot;,
+    &quot;Python.xml_ex1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.xml_ex2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.xml_hw.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ToolWindowGit.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/erhan/work/learning/PythonProgramming/PythonRepo/test_automation&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings module-name="PythonRepo" is-module-sdk="true">
@@ -129,9 +159,12 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test_automation" />
       <recent name="$PROJECT_DIR$/Python_DataAnalysis/Pandas" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/DSP/FFT" />
+      <recent name="$PROJECT_DIR$/OFDM" />
       <recent name="$PROJECT_DIR$/Py100DaysOfCode_Course/ceasar_ciphering" />
       <recent name="$PROJECT_DIR$/PythonSeleniumCourse/course_examples/files" />
       <recent name="$PROJECT_DIR$/PythonSeleniumCourse/course_examples/Libraries_and_Modules" />
@@ -298,7 +331,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-f2b7a9f6281b-6e1f45a539f7-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.29346.142" />
+        <option value="bundled-python-sdk-4762d8aabb82-6d6dccd035ac-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.30387.173" />
       </set>
     </attachedChunks>
   </component>
@@ -487,7 +520,39 @@
       <option name="project" value="LOCAL" />
       <updated>1726917225951</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Py4E course examples">
+      <option name="closed" value="true" />
+      <created>1767785986091</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1767785986091</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Py4E course examples">
+      <option name="closed" value="true" />
+      <created>1767786002118</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1767786002118</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Py4E course examples">
+      <option name="closed" value="true" />
+      <created>1767786010656</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1767786010656</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Py4E course examples">
+      <option name="closed" value="true" />
+      <created>1767786023913</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1767786023913</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="UnknownFeatures">

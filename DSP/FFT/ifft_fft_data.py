@@ -26,7 +26,7 @@ xt = xt / (max_xt+1)
 xt_re = xt.real  # real
 xt_im = xt.imag  # imaginary
 
-file_name = "./fft_input.txt"
+file_name = "fft_input.txt"
 with open(file_name, "w") as f:
     f.write('uint16_t real_arr_fix[1024] = { \n')
 

@@ -24,6 +24,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/Python_DataScience_and_ML_Course/Py-DS-ML-Bootcamp-master/11-Linear-Regression/USA_Housing.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Python_DataScience_and_ML_Course/Py-DS-ML-Bootcamp-master/13-Logistic-Regression/advertising.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/cv2/exam_data.csv">
           <value>
             <Attribute>
