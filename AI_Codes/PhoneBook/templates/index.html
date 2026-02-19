@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📱 Phone Book Manager</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        .header-stats {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        /* Main Layout */
+        .main {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 30px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            height: fit-content;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-group {
+            margin-bottom: 12px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+            background: #f8f9ff;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .btn:last-child {
+            margin-bottom: 0;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        .btn-secondary:hover {
+            background: #e0e0e0;
+        }
+
+        .btn-danger {
+            background: #ff6b6b;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #ff5252;
+            transform: translateY(-2px);
+        }
+
+        .btn-warning {
+            background: #ffa502;
+            color: white;
+        }
+
+        .btn-warning:hover {
+            background: #ff9500;
+        }
+
+        .btn-success {
+            background: #26de81;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #20c997;
+        }
+
+        /* Buttons Grid */
+        .btn-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+
+        .btn-grid .btn {
+            margin-bottom: 0;
+        }
+
+        /* Content Area */
+        .content {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .content-header h2 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .refresh-btn {
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .refresh-btn:hover {
+            transform: rotate(180deg);
+        }
+
+        /* Table */
+        .table-container {
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background: #f8f9ff;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            color: #667eea;
+            border-bottom: 2px solid #e0e0e0;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 14px;
+        }
+
+        tr:hover {
+            background: #f8f9ff;
+        }
+
+        tr.selected {
+            background: #e8eeff;
+        }
+
+        .table-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-sm {
+            padding: 6px 12px;
+            font-size: 12px;
+            cursor: pointer;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-sm-edit {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-sm-delete {
+            background: #ff6b6b;
+            color: white;
+        }
+
+        .btn-sm:hover {
+            transform: translateY(-1px);
+        }
+
+        /* Messages */
+        .message {
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: none;
+            animation: slideIn 0.3s ease;
+        }
+
+        .message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            display: block;
+        }
+
+        .message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            display: block;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+        }
+
+        .empty-state-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .empty-state-text {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .main {
+                grid-template-columns: 1fr;
+            }
+
+            .header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            table {
+                font-size: 12px;
+            }
+
+            td, th {
+                padding: 10px;
+            }
+
+            .btn-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Loading */
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div>
+                <h1>📱 Phone Book Manager</h1>
+                <p style="margin-top: 5px; opacity: 0.9;">Beautiful • Modern • Powerful</p>
+            </div>
+            <div class="header-stats">
+                <span id="totalContacts">0</span> contacts
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Add/Edit Section -->
+                <div class="section">
+                    <div class="section-title">✏️ Add/Edit Contact</div>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" id="name" placeholder="First name">
+                    </div>
+                    <div class="form-group">
+                        <label>Surname</label>
+                        <input type="text" id="surname" placeholder="Last name">
+                    </div>
+                    <div class="form-group">
+                        <label>ID</label>
+                        <input type="number" id="id" placeholder="Unique ID">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="text" id="phone" placeholder="Phone number">
+                    </div>
+                    <div class="form-group">
+                        <label>Profession</label>
+                        <input type="text" id="profession" placeholder="Job title">
+                    </div>
+                    <button class="btn btn-primary" onclick="addContact()">➕ Add Contact</button>
+                    <button class="btn btn-secondary" onclick="clearForm()">🗑️ Clear Form</button>
+                </div>
+
+                <!-- Search Section -->
+                <div class="section">
+                    <div class="section-title">🔍 Search</div>
+                    <div class="form-group">
+                        <label>Type</label>
+                        <select id="searchType">
+                            <option value="id">By ID</option>
+                            <option value="name">By Name</option>
+                            <option value="surname">By Surname</option>
+                            <option value="phone">By Phone</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Search</label>
+                        <input type="text" id="searchValue" placeholder="Enter value">
+                    </div>
+                    <button class="btn btn-primary" onclick="searchContacts()">🔎 Search</button>
+                    <button class="btn btn-secondary" onclick="loadContacts()">🔄 Show All</button>
+                </div>
+
+                <!-- Sort Section -->
+                <div class="section">
+                    <div class="section-title">↕️ Sort</div>
+                    <div class="btn-grid">
+                        <button class="btn btn-warning" onclick="sortContacts('name')">Name</button>
+                        <button class="btn btn-warning" onclick="sortContacts('surname')">Surname</button>
+                        <button class="btn btn-warning" onclick="sortContacts('id')">ID</button>
+                        <button class="btn btn-warning" onclick="sortContacts('phone')">Phone</button>
+                        <button class="btn btn-warning" onclick="sortContacts('profession')">Profession</button>
+                    </div>
+                </div>
+
+                <!-- Export Section -->
+                <div class="section">
+                    <div class="section-title">💾 Export</div>
+                    <button class="btn btn-success" onclick="exportCSV()">📤 Download CSV</button>
+                </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="content">
+                <div class="content-header">
+                    <h2>📋 Contacts List</h2>
+                    <button class="refresh-btn" onclick="loadContacts()">🔄</button>
+                </div>
+
+                <div id="message" class="message"></div>
+
+                <div id="tableContainer" class="table-container">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        Loading contacts...
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 10px;">
+                    <button class="btn btn-danger" style="flex: 1;" onclick="deleteSelected()">🗑️ Delete Selected</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let selectedContactId = null;
+
+        // Load contacts on page load
+        document.addEventListener('DOMContentLoaded', loadContacts);
+
+        async function loadContacts() {
+            try {
+                const response = await fetch('/api/contacts');
+                const data = await response.json();
+                displayContacts(data.contacts);
+                document.getElementById('totalContacts').textContent = data.count;
+            } catch (error) {
+                showMessage('Error loading contacts', 'error');
+                console.error(error);
+            }
+        }
+
+        function displayContacts(contacts) {
+            const container = document.getElementById('tableContainer');
+            
+            if (contacts.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">📭</div>
+                        <div class="empty-state-text">No contacts yet</div>
+                        <div style="font-size: 13px; color: #ccc;">Add your first contact to get started</div>
+                    </div>
+                `;
+                return;
+            }
+
+            let html = `
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Surname</th>
+                            <th>Phone</th>
+                            <th>Profession</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+
+            contacts.forEach(contact => {
+                html += `
+                    <tr class="${selectedContactId === contact.id ? 'selected' : ''}" onclick="selectContact(${contact.id})">
+                        <td><input type="radio" name="contact" value="${contact.id}" ${selectedContactId === contact.id ? 'checked' : ''}></td>
+                        <td>${contact.id}</td>
+                        <td>${contact.name}</td>
+                        <td>${contact.surname}</td>
+                        <td>${contact.phone}</td>
+                        <td>${contact.profession}</td>
+                        <td>
+                            <div class="table-actions">
+                                <button class="btn-sm btn-sm-edit" onclick="editContact(${contact.id})">Edit</button>
+                                <button class="btn-sm btn-sm-delete" onclick="deleteContact(${contact.id})">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                `;
+            });
+
+            html += `</tbody></table>`;
+            container.innerHTML = html;
+        }
+
+        function selectContact(id) {
+            selectedContactId = id;
+            loadContacts();
+        }
+
+        async function addContact() {
+            const name = document.getElementById('name').value.trim();
+            const surname = document.getElementById('surname').value.trim();
+            const id = document.getElementById('id').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const profession = document.getElementById('profession').value.trim();
+
+            if (!name || !surname || !id || !phone || !profession) {
+                showMessage('All fields are required!', 'error');
+                return;
+            }
+
+            try {
+                const response = await fetch('/api/contacts', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, surname, id, phone, profession })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    showMessage(`✓ Contact '${name} ${surname}' added successfully!`, 'success');
+                    displayContacts(data.contacts);
+                    document.getElementById('totalContacts').textContent = data.contacts.length;
+                    clearForm();
+                } else {
+                    showMessage(data.message, 'error');
+                }
+            } catch (error) {
+                showMessage('Error adding contact', 'error');
+                console.error(error);
+            }
+        }
+
+        async function editContact(id) {
+            const contact = getContactData(id);
+            if (contact) {
+                document.getElementById('name').value = contact.name;
+                document.getElementById('surname').value = contact.surname;
+                document.getElementById('id').value = contact.id;
+                document.getElementById('phone').value = contact.phone;
+                document.getElementById('profession').value = contact.profession;
+            }
+        }
+
+        async function updateContact() {
+            const id = parseInt(document.getElementById('id').value);
+            const name = document.getElementById('name').value.trim();
+            const surname = document.getElementById('surname').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const profession = document.getElementById('profession').value.trim();
+
+            try {
+                const response = await fetch(`/api/contacts/${id}`, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, surname, phone, profession })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    showMessage('✓ Contact updated successfully!', 'success');
+                    displayContacts(data.contacts);
+                    clearForm();
+                } else {
+                    showMessage(data.message, 'error');
+                }
+            } catch (error) {
+                showMessage('Error updating contact', 'error');
+            }
+        }
+
+        async function deleteContact(id) {
+            if (!confirm('Are you sure you want to delete this contact?')) return;
+
+            try {
+                const response = await fetch(`/api/contacts/${id}`, { method: 'DELETE' });
+                const data = await response.json();
+
+                if (data.success) {
+                    showMessage('✓ Contact deleted successfully!', 'success');
+                    displayContacts(data.contacts);
+                    document.getElementById('totalContacts').textContent = data.contacts.length;
+                    clearForm();
+                } else {
+                    showMessage(data.message, 'error');
+                }
+            } catch (error) {
+                showMessage('Error deleting contact', 'error');
+            }
+        }
+
+        function deleteSelected() {
+            if (selectedContactId === null) {
+                showMessage('Select a contact to delete!', 'error');
+                return;
+            }
+            deleteContact(selectedContactId);
+        }
+
+        async function searchContacts() {
+            const type = document.getElementById('searchType').value;
+            const value = document.getElementById('searchValue').value.trim();
+
+            if (!value) {
+                showMessage('Enter search value!', 'error');
+                return;
+            }
+
+            try {
+                const response = await fetch('/api/search', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ type, value })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    displayContacts(data.results);
+                    showMessage(`Found ${data.count} contact(s)`, 'success');
+                } else {
+                    showMessage(data.message, 'error');
+                }
+            } catch (error) {
+                showMessage('Error searching contacts', 'error');
+            }
+        }
+
+        async function sortContacts(sortBy) {
+            try {
+                const response = await fetch(`/api/sort/${sortBy}`);
+                const data = await response.json();
+
+                if (data.success) {
+                    displayContacts(data.contacts);
+                    showMessage(`✓ Sorted by ${sortBy}!`, 'success');
+                } else {
+                    showMessage('Error sorting', 'error');
+                }
+            } catch (error) {
+                showMessage('Error sorting contacts', 'error');
+            }
+        }
+
+        async function exportCSV() {
+            try {
+                const response = await fetch('/api/export/csv');
+                const data = await response.json();
+
+                if (data.success) {
+                    const element = document.createElement('a');
+                    element.setAttribute('href', 'data:text/csv;charset=utf-8,' + encodeURIComponent(data.csv));
+                    element.setAttribute('download', data.filename);
+                    element.style.display = 'none';
+                    document.body.appendChild(element);
+                    element.click();
+                    document.body.removeChild(element);
+                    showMessage('✓ Exported successfully!', 'success');
+                }
+            } catch (error) {
+                showMessage('Error exporting', 'error');
+            }
+        }
+
+        function clearForm() {
+            document.getElementById('name').value = '';
+            document.getElementById('surname').value = '';
+            document.getElementById('id').value = '';
+            document.getElementById('phone').value = '';
+            document.getElementById('profession').value = '';
+            selectedContactId = null;
+            loadContacts();
+        }
+
+        function getContactData(id) {
+            // This would typically fetch from server
+            // For now, we'll just return for editing
+            return null;
+        }
+
+        function showMessage(message, type) {
+            const msgEl = document.getElementById('message');
+            msgEl.textContent = message;
+            msgEl.className = `message ${type}`;
+            setTimeout(() => {
+                msgEl.className = 'message';
+            }, 3000);
+        }
+
+        // Auto-refresh on interval
+        setInterval(loadContacts, 5000);
+    </script>
+</body>
+</html>
