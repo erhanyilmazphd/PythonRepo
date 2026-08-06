@@ -1,0 +1,365 @@
+{
+  "timestamp": "2026-08-06T14:50:15.420977",
+  "algorithms": {
+    "throughput": {
+      "name": "throughput",
+      "n_runs": 5,
+      "throughput": {
+        "mean": 405.65,
+        "std": 33.65,
+        "min": 363.77,
+        "max": 461.64,
+        "p25": 386.67,
+        "p75": 422.27
+      },
+      "fairness": {
+        "mean": 0.9822,
+        "std": 0.0113,
+        "min": 0.961,
+        "max": 0.9943,
+        "p25": 0.9825,
+        "p75": 0.9872
+      },
+      "min_rate": {
+        "mean": 41.19,
+        "std": 4.38,
+        "min": 35.91,
+        "max": 47.63
+      },
+      "switches": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1,
+        "max": 1
+      },
+      "score": {
+        "mean": 0.9633,
+        "std": 0.0516
+      }
+    },
+    "proportional_fair": {
+      "name": "proportional_fair",
+      "n_runs": 5,
+      "throughput": {
+        "mean": 384.65,
+        "std": 32.09,
+        "min": 344.74,
+        "max": 438.43,
+        "p25": 366.83,
+        "p75": 399.59
+      },
+      "fairness": {
+        "mean": 0.9822,
+        "std": 0.0113,
+        "min": 0.961,
+        "max": 0.9943,
+        "p25": 0.9825,
+        "p75": 0.9871
+      },
+      "min_rate": {
+        "mean": 39.05,
+        "std": 4.16,
+        "min": 34.07,
+        "max": 45.23
+      },
+      "switches": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0,
+        "max": 0
+      },
+      "score": {
+        "mean": 0.9337,
+        "std": 0.0492
+      }
+    },
+    "max_min": {
+      "name": "max_min",
+      "n_runs": 5,
+      "throughput": {
+        "mean": 405.66,
+        "std": 33.51,
+        "min": 364.15,
+        "max": 461.47,
+        "p25": 386.67,
+        "p75": 422.27
+      },
+      "fairness": {
+        "mean": 0.9822,
+        "std": 0.0113,
+        "min": 0.961,
+        "max": 0.9943,
+        "p25": 0.9825,
+        "p75": 0.9872
+      },
+      "min_rate": {
+        "mean": 41.19,
+        "std": 4.36,
+        "min": 35.91,
+        "max": 47.61
+      },
+      "switches": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1,
+        "max": 1
+      },
+      "score": {
+        "mean": 0.9633,
+        "std": 0.0514
+      }
+    },
+    "jain": {
+      "name": "jain",
+      "n_runs": 5,
+      "throughput": {
+        "mean": 384.65,
+        "std": 32.09,
+        "min": 344.74,
+        "max": 438.43,
+        "p25": 366.83,
+        "p75": 399.59
+      },
+      "fairness": {
+        "mean": 0.9822,
+        "std": 0.0113,
+        "min": 0.961,
+        "max": 0.9943,
+        "p25": 0.9825,
+        "p75": 0.9871
+      },
+      "min_rate": {
+        "mean": 39.05,
+        "std": 4.16,
+        "min": 34.07,
+        "max": 45.23
+      },
+      "switches": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0,
+        "max": 0
+      },
+      "score": {
+        "mean": 0.9337,
+        "std": 0.0492
+      }
+    },
+    "hpf": {
+      "name": "hpf",
+      "n_runs": 5,
+      "throughput": {
+        "mean": 384.65,
+        "std": 32.09,
+        "min": 344.74,
+        "max": 438.43,
+        "p25": 366.83,
+        "p75": 399.59
+      },
+      "fairness": {
+        "mean": 0.9822,
+        "std": 0.0113,
+        "min": 0.961,
+        "max": 0.9943,
+        "p25": 0.9825,
+        "p75": 0.9871
+      },
+      "min_rate": {
+        "mean": 39.05,
+        "std": 4.16,
+        "min": 34.07,
+        "max": 45.23
+      },
+      "switches": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0,
+        "max": 0
+      },
+      "score": {
+        "mean": 0.9337,
+        "std": 0.0492
+      }
+    },
+    "adaptive_hpf": {
+      "name": "adaptive_hpf",
+      "n_runs": 5,
+      "throughput": {
+        "mean": 384.65,
+        "std": 32.09,
+        "min": 344.74,
+        "max": 438.43,
+        "p25": 366.83,
+        "p75": 399.59
+      },
+      "fairness": {
+        "mean": 0.9822,
+        "std": 0.0113,
+        "min": 0.961,
+        "max": 0.9943,
+        "p25": 0.9825,
+        "p75": 0.9871
+      },
+      "min_rate": {
+        "mean": 39.05,
+        "std": 4.16,
+        "min": 34.07,
+        "max": 45.23
+      },
+      "switches": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0,
+        "max": 0
+      },
+      "score": {
+        "mean": 0.9337,
+        "std": 0.0492
+      }
+    },
+    "weighted_tf": {
+      "name": "weighted_tf",
+      "n_runs": 5,
+      "throughput": {
+        "mean": 384.65,
+        "std": 32.09,
+        "min": 344.74,
+        "max": 438.43,
+        "p25": 366.83,
+        "p75": 399.59
+      },
+      "fairness": {
+        "mean": 0.9822,
+        "std": 0.0113,
+        "min": 0.961,
+        "max": 0.9943,
+        "p25": 0.9825,
+        "p75": 0.9871
+      },
+      "min_rate": {
+        "mean": 39.05,
+        "std": 4.16,
+        "min": 34.07,
+        "max": 45.23
+      },
+      "switches": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0,
+        "max": 0
+      },
+      "score": {
+        "mean": 0.9337,
+        "std": 0.0492
+      }
+    },
+    "hpf_switch_cost": {
+      "name": "hpf_switch_cost",
+      "n_runs": 5,
+      "throughput": {
+        "mean": 384.65,
+        "std": 32.09,
+        "min": 344.74,
+        "max": 438.43,
+        "p25": 366.83,
+        "p75": 399.59
+      },
+      "fairness": {
+        "mean": 0.9822,
+        "std": 0.0113,
+        "min": 0.961,
+        "max": 0.9943,
+        "p25": 0.9825,
+        "p75": 0.9871
+      },
+      "min_rate": {
+        "mean": 39.05,
+        "std": 4.16,
+        "min": 34.07,
+        "max": 45.23
+      },
+      "switches": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0,
+        "max": 0
+      },
+      "score": {
+        "mean": 0.9337,
+        "std": 0.0492
+      }
+    },
+    "adaptive_threshold": {
+      "name": "adaptive_threshold",
+      "n_runs": 5,
+      "throughput": {
+        "mean": 384.65,
+        "std": 32.09,
+        "min": 344.74,
+        "max": 438.43,
+        "p25": 366.83,
+        "p75": 399.59
+      },
+      "fairness": {
+        "mean": 0.9822,
+        "std": 0.0113,
+        "min": 0.961,
+        "max": 0.9943,
+        "p25": 0.9825,
+        "p75": 0.9871
+      },
+      "min_rate": {
+        "mean": 39.05,
+        "std": 4.16,
+        "min": 34.07,
+        "max": 45.23
+      },
+      "switches": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0,
+        "max": 0
+      },
+      "score": {
+        "mean": 0.9337,
+        "std": 0.0492
+      }
+    },
+    "channel_predictor": {
+      "name": "channel_predictor",
+      "n_runs": 5,
+      "throughput": {
+        "mean": 406.18,
+        "std": 33.98,
+        "min": 364.31,
+        "max": 462.91,
+        "p25": 386.77,
+        "p75": 422.86
+      },
+      "fairness": {
+        "mean": 0.9822,
+        "std": 0.0113,
+        "min": 0.961,
+        "max": 0.9944,
+        "p25": 0.9826,
+        "p75": 0.9872
+      },
+      "min_rate": {
+        "mean": 41.24,
+        "std": 4.41,
+        "min": 35.92,
+        "max": 47.76
+      },
+      "switches": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1,
+        "max": 1
+      },
+      "score": {
+        "mean": 0.964,
+        "std": 0.0521
+      }
+    }
+  }
+}
