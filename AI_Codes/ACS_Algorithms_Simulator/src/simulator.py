@@ -79,7 +79,7 @@ class ACSAlgorithm(ABC):
             if improvement > self.config.switch_threshold:
                 self.current_channel = best_channel
                 self.last_switch_time = env_state.timestep
-                self.switch_history.append((env_state.timestep, best_channel))
+                self.switch_history.append((int(env_state.timestep), int(best_channel)))
 
         return self.current_channel
 
