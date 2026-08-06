@@ -1,284 +1,124 @@
-# PTMP Auto-Channel Selection Simulator - Complete Package
+# PTMP Auto-Channel Selection (ACS) Simulator
 
-**Status:** ✅ **PRODUCTION READY**  
-**Date:** August 6, 2026  
-**Size:** 260 KB | 3,900+ lines of code & documentation  
-**Python:** 3.8+
+A complete, production-ready Python simulator for benchmarking Auto-Channel Selection algorithms in Point-to-Multipoint (PTMP) wireless networks.
 
----
-
-## 🚀 Quick Start (2 minutes)
+## Quick Start
 
 ```bash
 # Install dependencies
-pip install numpy matplotlib
+pip install -r requirements.txt
 
-# Run interactive demo
-python ptmp_acs_simulator.py
+# Run interactive demo (real-time visualization)
+python src/ptmp_acs_simulator.py
 
-# Or run full benchmark
-python run_simulator_headless.py
+# Run full benchmark suite (headless mode)
+python src/run_simulator_headless.py
 ```
 
----
+## What's Included
 
-## 📦 What You Have
+### Core Components
+- **ptmp_acs_simulator.py** (900+ lines): Main simulator with 6 ACS algorithms
+- **run_simulator_headless.py** (400+ lines): Batch experiment runner
 
-### Source Code (1,300 lines)
-- **ptmp_acs_simulator.py** - Main simulator with 6 algorithms
-- **run_simulator_headless.py** - Batch experiment runner
+### 6 Implemented Algorithms
+1. Throughput Maximizer - Focus on maximum aggregate rate
+2. Max-Min Fairness - Protect worst-case user
+3. Jain's Fairness Index - Balanced fairness metric
+4. WTF (Weighted Throughput-Fairness) - 70% throughput, 30% fairness
+5. HPF-ACS (Hybrid Proportional Fair) - Comprehensive approach
+6. Adaptive HPF-ACS - Auto-tuning based on conditions
 
-### Documentation (1,600+ lines)
-- **00_START_HERE.txt** - Quick orientation (read first!)
-- **QUICKSTART.md** - 5-15 minute tutorial
-- **SIMULATOR_README.md** - Complete reference
-- **ARCHITECTURE.md** - System design & extension guide
-- **INDEX.md** - Master navigation guide
-- **DELIVERABLES_SUMMARY.md** - What was built
+### Documentation
+- **docs/00_START_HERE.txt** - Entry point (start here!)
+- **docs/QUICKSTART.md** - 5-15 minute getting started guide
+- **docs/SIMULATOR_README.md** - Complete reference manual
+- **docs/ARCHITECTURE.md** - System design and implementation details
+- **docs/INDEX.md** - Master documentation index
+- **docs/DELIVERABLES_SUMMARY.md** - Overview of what was built
 
-### Previous Deliverables
-- **PTMP_Channel_Selection_Algorithm.docx** - Phase 1 algorithm doc
-- **ALGORITHM_SUMMARY.txt** - Algorithm reference
+## Output
 
----
+### Interactive Mode
+- Real-time visualization with 8 subplots
+- Algorithm comparison dashboard
+- Station rate distribution analysis
 
-## 📚 Documentation Roadmap
+### Headless Mode (Batch)
+- 6 PNG visualizations (results_exp*.png)
+- 6 JSON statistics files (stats_exp*.json)
+- Comprehensive comparison summary
 
-### 5 Minutes?
-→ Read: **00_START_HERE.txt**  
-→ Run: `python ptmp_acs_simulator.py`
+## Features
 
-### 15 Minutes?
-→ Read: **QUICKSTART.md**  
-→ Run: Both simulators  
-→ Check generated files
+✓ Realistic PTMP wireless environment simulation  
+✓ 6 ACS algorithms ready to benchmark  
+✓ Real-time interactive visualization  
+✓ Batch experiment runner with 6 predefined scenarios  
+✓ Comprehensive performance metrics  
+✓ Production-quality, well-documented code  
+✓ Easily extensible for custom algorithms  
 
-### 1 Hour?
-→ Read: **QUICKSTART.md** + **SIMULATOR_README.md**  
-→ Create custom scenario  
-→ Analyze outputs
+## Getting Help
 
-### 2-3 Hours (Complete Mastery)?
-→ Read all documentation  
-→ Study **ARCHITECTURE.md**  
-→ Review source code  
-→ Implement custom algorithms
+1. **For Quick Start**: Read `docs/QUICKSTART.md` (5 minutes)
+2. **For Full Reference**: Read `docs/SIMULATOR_README.md` (30 minutes)
+3. **For System Design**: Read `docs/ARCHITECTURE.md` (20 minutes)
+4. **For Everything**: Start with `docs/00_START_HERE.txt`
 
----
+## Key Metrics
 
-## 🎯 Features
+- **Throughput** (Mbps) - Sum of achievable rates across all stations
+- **Minimum Rate** (Mbps) - Rate of worst-performing user
+- **Fairness Index** (0-1) - 1.0 = perfectly fair, <0.8 = unfair
+- **Channel Switches** - Stability vs adaptivity tradeoff
 
-✅ **6 Algorithms Implemented**
-- Throughput Maximizer
-- Max-Min Fairness  
-- Jain's Fairness Index
-- Weighted Throughput-Fairness (WTF)
-- Hybrid Proportional Fair (HPF-ACS)
-- Adaptive HPF-ACS
+## Configuration
 
-✅ **Realistic PTMP Simulation**
-- N configurable stations
-- F configurable channels
-- Distance-based rates
-- AWGN interference model
-- EWMA rate smoothing
+Customize simulation parameters:
 
-✅ **Comprehensive Visualization**
-- 8 complementary subplots
-- Real-time interactive display
-- PNG export for papers
-- Algorithm comparison table
-
-✅ **18 Tunable Parameters**
-- Network configuration (stations, channels, time steps)
-- Wireless conditions (rates, interference, fairness)
-- Algorithm behavior (switching, smoothing)
-
----
-
-## 📊 Generated Outputs
-
-**Interactive Mode:**
-- Real-time visualization
-- Algorithm comparison
-- Performance metrics
-
-**Batch Mode (6 Experiments):**
-- `results_exp*.png` - 6 visualizations
-- `stats_exp*.json` - 6 statistics files
-- `comparison_all_experiments.json` - Summary
-
----
-
-## 🔍 File Structure
-
-```
-├── 00_START_HERE.txt           ← Start here!
-├── INDEX.md                    ← Master guide
-├── QUICKSTART.md               ← Tutorial
-├── SIMULATOR_README.md         ← Reference
-├── ARCHITECTURE.md             ← System design
-├── DELIVERABLES_SUMMARY.md     ← Overview
-├── COMPLETE_DELIVERY_SUMMARY.txt ← This package
-├── ptmp_acs_simulator.py       ← Main code
-├── run_simulator_headless.py   ← Batch runner
-├── PTMP_Channel_Selection_Algorithm.docx
-└── ALGORITHM_SUMMARY.txt
-```
-
----
-
-## 💻 Usage Examples
-
-### Quick Demo
-```bash
-python ptmp_acs_simulator.py
-```
-
-### Full Benchmark
-```bash
-python run_simulator_headless.py
-```
-
-### Custom Scenario (Python)
 ```python
-from ptmp_acs_simulator import SimulationConfig, PTMPSimulator
+from src.ptmp_acs_simulator import SimulationConfig, PTMPSimulator
 
 config = SimulationConfig(
-    n_stations=16,
-    n_channels=6,
-    fairness_param=0.3,
+    n_stations=8,              # Number of clients
+    n_channels=4,              # Number of channels
+    n_time_steps=200,          # Simulation duration
+    min_rate=5.0,              # Minimum rate (Mbps)
+    max_rate=100.0,            # Maximum rate (Mbps)
+    fairness_param=0.5,        # 0=random, 1=deterministic positions
+    base_interference=[0.2, 0.4, 0.1, 0.3],  # Per-channel interference
 )
 
-simulator = PTMPSimulator(config)
-simulator.run()
-stats = simulator.get_summary_stats()
+sim = PTMPSimulator(config)
+sim.run()
+stats = sim.get_summary_stats()
 ```
 
-See **QUICKSTART.md** for more examples.
+## Requirements
+
+- Python 3.8+
+- numpy >= 1.19.0
+- matplotlib >= 3.3.0
+
+## Quick Links
+
+| Want to... | Read... |
+|-----------|---------|
+| Get started quickly | docs/QUICKSTART.md |
+| Understand all algorithms | docs/SIMULATOR_README.md |
+| See the architecture | docs/ARCHITECTURE.md |
+| Navigate all docs | docs/INDEX.md |
+| Get immediate help | docs/00_START_HERE.txt |
+
+## Next Steps
+
+1. Read `docs/00_START_HERE.txt` for comprehensive overview
+2. Run `python src/ptmp_acs_simulator.py` for interactive demo
+3. Run `python src/run_simulator_headless.py` for full benchmark
+4. Check generated PNG and JSON files in `output/`
+5. Customize scenarios as needed
 
 ---
 
-## 📈 Performance
-
-| Metric | Value |
-|--------|-------|
-| Time per step | <1 ms |
-| Memory | <10 MB typical |
-| Full sim (200 steps) | ~200 ms |
-| Benchmark suite | ~2 minutes |
-| Code quality | Production-grade |
-
----
-
-## 🛠️ Customization
-
-**Add Algorithm:**
-Inherit from `ACSAlgorithm`, implement `select_channel()`
-
-**Custom Scenario:**
-Modify `SimulationConfig` parameters
-
-**New Metrics:**
-Extend `ChannelMetrics` calculation
-
-**Wireless Model:**
-Update `PTMPEnvironment` methods
-
-See **ARCHITECTURE.md** for details.
-
----
-
-## ❓ FAQ
-
-**Q: Where do I start?**
-→ Open `00_START_HERE.txt`
-
-**Q: How do I run it?**
-→ `python ptmp_acs_simulator.py`
-
-**Q: How do I customize it?**
-→ See **QUICKSTART.md** → Use Cases
-
-**Q: How do I understand the results?**
-→ See **SIMULATOR_README.md** → Performance Metrics
-
-**Q: How do I add a new algorithm?**
-→ See **ARCHITECTURE.md** → Extension Points
-
-**Q: Need help?**
-→ Check **SIMULATOR_README.md** → Troubleshooting
-
----
-
-## ✅ Quality Assurance
-
-✓ Production-quality Python code  
-✓ Type hints & docstrings  
-✓ 3,000+ lines of documentation  
-✓ 6 predefined experiments  
-✓ Tested & verified working  
-✓ Easy to extend  
-✓ Publication-ready outputs  
-
----
-
-## 📞 Support
-
-| Topic | Location |
-|-------|----------|
-| Getting started | 00_START_HERE.txt |
-| Quick tutorial | QUICKSTART.md |
-| Algorithm details | SIMULATOR_README.md |
-| Configuration | SIMULATOR_README.md → Config Parameters |
-| Troubleshooting | SIMULATOR_README.md → Troubleshooting |
-| System design | ARCHITECTURE.md |
-| Extension help | ARCHITECTURE.md → Extension Points |
-
----
-
-## 🎓 Educational Value
-
-Learn about:
-- ✓ PTMP wireless networks
-- ✓ Multi-objective optimization
-- ✓ Fairness metrics (Jain's index)
-- ✓ Channel selection algorithms
-- ✓ Python software engineering
-- ✓ Data analysis & visualization
-
----
-
-## 📊 Benchmark Results
-
-The simulator compares 6 algorithms across:
-- Uniform vs random station distribution
-- Various interference levels
-- Conservative vs aggressive switching
-- Scale tests (2-32 stations)
-
-Automatic comparison, metrics collection, and output generation.
-
----
-
-## 🚀 Ready to Start?
-
-1. **First time?** → Open `00_START_HERE.txt`
-2. **Quick demo?** → Run `python ptmp_acs_simulator.py`
-3. **Full benchmark?** → Run `python run_simulator_headless.py`
-4. **Deep dive?** → Read all documentation
-5. **Extend it?** → See ARCHITECTURE.md
-
----
-
-## 📄 Version
-
-**Product:** PTMP Auto-Channel Selection Simulator v1.0  
-**Release:** August 2026  
-**Status:** Production Ready  
-**Python:** 3.8+  
-**Dependencies:** numpy, matplotlib  
-
----
-
-**Next Step:** Open `00_START_HERE.txt` → Start Now! 🚀
+**Status**: Production-Ready | **Created**: August 2026 | **Python**: 3.8+ required
