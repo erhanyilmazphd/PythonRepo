@@ -1,0 +1,230 @@
+{
+  "uniform": {
+    "Throughput Maximizer": {
+      "throughput": 382.5866326257947,
+      "fairness": 0.9211829029351635,
+      "min_rate": 24.40249575352003,
+      "switches": 0
+    },
+    "Max-Min Fairness": {
+      "throughput": 382.5866326257947,
+      "fairness": 0.9211829029351635,
+      "min_rate": 24.40249575352003,
+      "switches": 0
+    },
+    "Jain's Fairness": {
+      "throughput": 382.5866326257947,
+      "fairness": 0.9211829029351635,
+      "min_rate": 24.40249575352003,
+      "switches": 0
+    },
+    "WTF (\u03b1=0.7, \u03b2=0.3)": {
+      "throughput": 382.5866326257947,
+      "fairness": 0.9211829029351635,
+      "min_rate": 24.40249575352003,
+      "switches": 0
+    },
+    "HPF-ACS (Proposed)": {
+      "throughput": 382.5866326257947,
+      "fairness": 0.9211829029351635,
+      "min_rate": 24.40249575352003,
+      "switches": 0
+    },
+    "Adaptive HPF-ACS": {
+      "throughput": 382.5866326257947,
+      "fairness": 0.9211829029351635,
+      "min_rate": 24.40249575352003,
+      "switches": 0
+    }
+  },
+  "random": {
+    "Throughput Maximizer": {
+      "throughput": 359.60688967816964,
+      "fairness": 0.6828185570859963,
+      "min_rate": 4.620241572864155,
+      "switches": 1
+    },
+    "Max-Min Fairness": {
+      "throughput": 359.60688967816964,
+      "fairness": 0.6828185570859963,
+      "min_rate": 4.620241572864155,
+      "switches": 1
+    },
+    "Jain's Fairness": {
+      "throughput": 358.5918414267863,
+      "fairness": 0.6828185570859963,
+      "min_rate": 4.607200198340709,
+      "switches": 1
+    },
+    "WTF (\u03b1=0.7, \u03b2=0.3)": {
+      "throughput": 359.60688967816964,
+      "fairness": 0.6828185570859963,
+      "min_rate": 4.620241572864155,
+      "switches": 1
+    },
+    "HPF-ACS (Proposed)": {
+      "throughput": 359.60688967816964,
+      "fairness": 0.6828185570859963,
+      "min_rate": 4.620241572864155,
+      "switches": 1
+    },
+    "Adaptive HPF-ACS": {
+      "throughput": 359.60688967816964,
+      "fairness": 0.6828185570859963,
+      "min_rate": 4.620241572864155,
+      "switches": 1
+    }
+  },
+  "high_interference": {
+    "Throughput Maximizer": {
+      "throughput": 321.73223811462344,
+      "fairness": 0.8168406244366718,
+      "min_rate": 3.4295889520728298,
+      "switches": 1
+    },
+    "Max-Min Fairness": {
+      "throughput": 321.73223811462344,
+      "fairness": 0.8168406244366718,
+      "min_rate": 3.4295889520728298,
+      "switches": 1
+    },
+    "Jain's Fairness": {
+      "throughput": 320.54833845682106,
+      "fairness": 0.8168406244366718,
+      "min_rate": 3.4169688639817037,
+      "switches": 1
+    },
+    "WTF (\u03b1=0.7, \u03b2=0.3)": {
+      "throughput": 321.73223811462344,
+      "fairness": 0.8168406244366718,
+      "min_rate": 3.4295889520728298,
+      "switches": 1
+    },
+    "HPF-ACS (Proposed)": {
+      "throughput": 321.73223811462344,
+      "fairness": 0.8168406244366718,
+      "min_rate": 3.4295889520728298,
+      "switches": 1
+    },
+    "Adaptive HPF-ACS": {
+      "throughput": 321.73223811462344,
+      "fairness": 0.8168406244366718,
+      "min_rate": 3.4295889520728298,
+      "switches": 1
+    }
+  },
+  "conservative": {
+    "Throughput Maximizer": {
+      "throughput": 394.9345555992047,
+      "fairness": 0.9056193914618086,
+      "min_rate": 29.619305023063234,
+      "switches": 0
+    },
+    "Max-Min Fairness": {
+      "throughput": 394.9345555992047,
+      "fairness": 0.9056193914618086,
+      "min_rate": 29.619305023063234,
+      "switches": 0
+    },
+    "Jain's Fairness": {
+      "throughput": 394.9345555992047,
+      "fairness": 0.9056193914618086,
+      "min_rate": 29.619305023063234,
+      "switches": 0
+    },
+    "WTF (\u03b1=0.7, \u03b2=0.3)": {
+      "throughput": 394.9345555992047,
+      "fairness": 0.9056193914618086,
+      "min_rate": 29.619305023063234,
+      "switches": 0
+    },
+    "HPF-ACS (Proposed)": {
+      "throughput": 394.9345555992047,
+      "fairness": 0.9056193914618086,
+      "min_rate": 29.619305023063234,
+      "switches": 0
+    },
+    "Adaptive HPF-ACS": {
+      "throughput": 394.9345555992047,
+      "fairness": 0.9056193914618086,
+      "min_rate": 29.619305023063234,
+      "switches": 0
+    }
+  },
+  "aggressive": {
+    "Throughput Maximizer": {
+      "throughput": 234.85319830763794,
+      "fairness": 0.5965959077635372,
+      "min_rate": 4.466851855023199,
+      "switches": 1
+    },
+    "Max-Min Fairness": {
+      "throughput": 234.85319830763794,
+      "fairness": 0.5965959077635372,
+      "min_rate": 4.466851855023199,
+      "switches": 1
+    },
+    "Jain's Fairness": {
+      "throughput": 232.9205927990863,
+      "fairness": 0.5965959077635372,
+      "min_rate": 4.430094158883188,
+      "switches": 1
+    },
+    "WTF (\u03b1=0.7, \u03b2=0.3)": {
+      "throughput": 234.85319830763794,
+      "fairness": 0.5965959077635372,
+      "min_rate": 4.466851855023199,
+      "switches": 1
+    },
+    "HPF-ACS (Proposed)": {
+      "throughput": 234.85319830763794,
+      "fairness": 0.5965959077635372,
+      "min_rate": 4.466851855023199,
+      "switches": 1
+    },
+    "Adaptive HPF-ACS": {
+      "throughput": 234.85319830763794,
+      "fairness": 0.5965959077635372,
+      "min_rate": 4.466851855023199,
+      "switches": 1
+    }
+  },
+  "many_stations": {
+    "Throughput Maximizer": {
+      "throughput": 641.9106356388767,
+      "fairness": 0.7383157982719029,
+      "min_rate": 5.591267526236022,
+      "switches": 1
+    },
+    "Max-Min Fairness": {
+      "throughput": 641.9106356388767,
+      "fairness": 0.7383157982719029,
+      "min_rate": 5.591267526236022,
+      "switches": 1
+    },
+    "Jain's Fairness": {
+      "throughput": 641.501339166575,
+      "fairness": 0.7383157982719029,
+      "min_rate": 5.587702409929911,
+      "switches": 1
+    },
+    "WTF (\u03b1=0.7, \u03b2=0.3)": {
+      "throughput": 641.9106356388767,
+      "fairness": 0.7383157982719029,
+      "min_rate": 5.591267526236022,
+      "switches": 1
+    },
+    "HPF-ACS (Proposed)": {
+      "throughput": 641.9106356388767,
+      "fairness": 0.7383157982719029,
+      "min_rate": 5.591267526236022,
+      "switches": 1
+    },
+    "Adaptive HPF-ACS": {
+      "throughput": 641.9106356388767,
+      "fairness": 0.7383157982719029,
+      "min_rate": 5.591267526236022,
+      "switches": 1
+    }
+  }
+}

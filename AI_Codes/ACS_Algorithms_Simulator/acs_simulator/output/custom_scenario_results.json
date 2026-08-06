@@ -1,0 +1,56 @@
+{
+  "throughput": {
+    "avg_throughput": 712.742265588647,
+    "min_throughput": 217.10694381356302,
+    "std_throughput": 40.77605505418741,
+    "avg_min_rate": 8.440176831270865,
+    "min_min_rate": 2.570944765805184,
+    "avg_fairness": 0.6483148584646156,
+    "switches": 0
+  },
+  "mmf": {
+    "avg_throughput": 712.742265588647,
+    "min_throughput": 217.10694381356302,
+    "std_throughput": 40.77605505418741,
+    "avg_min_rate": 8.440176831270865,
+    "min_min_rate": 2.570944765805184,
+    "avg_fairness": 0.6483148584646156,
+    "switches": 0
+  },
+  "jain": {
+    "avg_throughput": 712.742265588647,
+    "min_throughput": 217.10694381356302,
+    "std_throughput": 40.77605505418741,
+    "avg_min_rate": 8.440176831270865,
+    "min_min_rate": 2.570944765805184,
+    "avg_fairness": 0.6483148584646156,
+    "switches": 0
+  },
+  "wtf": {
+    "avg_throughput": 712.742265588647,
+    "min_throughput": 217.10694381356302,
+    "std_throughput": 40.77605505418741,
+    "avg_min_rate": 8.440176831270865,
+    "min_min_rate": 2.570944765805184,
+    "avg_fairness": 0.6483148584646156,
+    "switches": 0
+  },
+  "hpf": {
+    "avg_throughput": 712.742265588647,
+    "min_throughput": 217.10694381356302,
+    "std_throughput": 40.77605505418741,
+    "avg_min_rate": 8.440176831270865,
+    "min_min_rate": 2.570944765805184,
+    "avg_fairness": 0.6483148584646156,
+    "switches": 0
+  },
+  "adaptive_hpf": {
+    "avg_throughput": 712.742265588647,
+    "min_throughput": 217.10694381356302,
+    "std_throughput": 40.77605505418741,
+    "avg_min_rate": 8.440176831270865,
+    "min_min_rate": 2.570944765805184,
+    "avg_fairness": 0.6483148584646156,
+    "switches": 0
+  }
+}
