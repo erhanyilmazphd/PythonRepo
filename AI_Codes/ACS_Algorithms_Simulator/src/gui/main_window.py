@@ -169,10 +169,17 @@ class SimulatorGUI:
         self.paused = False
         self.current_step = 0
         self.simulator = None
+
+        # Reset button states
         self.play_btn.config(state=tk.NORMAL)
         self.pause_btn.config(state=tk.DISABLED)
         self.step_btn.config(state=tk.NORMAL)
+
+        # Clear all displays
         self._clear_display()
+
+        # Force GUI update
+        self.root.update_idletasks()
 
     def _on_speed_change(self, value):
         """Update speed"""
@@ -319,30 +326,62 @@ class SimulatorGUI:
         try:
             rates = self.simulator.environment.get_client_rates()
 
-            im = self.ax2.imshow(rates, cmap='RdYlGn', aspect='auto', vmin=0, vmax=self.config.max_rate)
-            self.ax2.set_xlabel('Channel')
-            self.ax2.set_ylabel('Station')
-            self.ax2.set_title('Station Rates (Mbps)')
+            # Handle empty or invalid rates
+            if rates is None or rates.size == 0:
+                self.ax2.text(0.5, 0.5, 'No data', ha='center', va='center', transform=self.ax2.transAxes)
+                self.canvas2.draw_idle()
+                return
 
-            plt.colorbar(im, ax=self.ax2, label='Rate')
+            # Ensure rates is 2D (stations x channels)
+            if len(rates.shape) == 1:
+                rates = rates.reshape(-1, 1)
+
+            # Create heatmap with proper color mapping
+            im = self.ax2.imshow(rates, cmap='RdYlGn', aspect='auto',
+                                vmin=0, vmax=self.config.max_rate,
+                                origin='upper', interpolation='nearest')
+
+            self.ax2.set_xlabel('Channel', fontsize=10)
+            self.ax2.set_ylabel('Station', fontsize=10)
+            self.ax2.set_title('Station Rates (Mbps)', fontsize=11)
+
+            # Add colorbar
+            cbar = plt.colorbar(im, ax=self.ax2, label='Rate (Mbps)')
+            cbar.ax.tick_params(labelsize=8)
+
             self.canvas2.draw_idle()
         except Exception as e:
             print(f"Heatmap update error: {e}")
+            self.ax2.text(0.5, 0.5, f'Error: {str(e)[:30]}', ha='center', va='center',
+                         transform=self.ax2.transAxes, fontsize=8)
 
     def _clear_display(self):
         """Clear all displays"""
+        # Clear charts
         self.ax1.clear()
+        self.ax1.set_xlabel('Channel')
+        self.ax1.set_ylabel('Throughput (Mbps)')
+        self.ax1.set_title('Channel Rates')
+        self.canvas1.draw_idle()
+
         self.ax2.clear()
+        self.ax2.set_xlabel('Channel')
+        self.ax2.set_ylabel('Station')
+        self.ax2.set_title('Station Rates (Mbps)')
+        self.canvas2.draw_idle()
+
+        # Clear metrics text
         self.metrics_text.config(state=tk.NORMAL)
         self.metrics_text.delete('1.0', tk.END)
+        self.metrics_text.insert('1.0', '=== METRICS SUMMARY ===\n\n(Run simulation to see metrics)')
         self.metrics_text.config(state=tk.DISABLED)
 
+        # Clear algorithm table
         for item in self.tree.get_children():
             self.tree.delete(item)
 
+        # Reset time label
         self.time_label.config(text="Time: 0/200")
-        self.canvas1.draw_idle()
-        self.canvas2.draw_idle()
 
     def _on_closing(self):
         """Handle window closing"""
