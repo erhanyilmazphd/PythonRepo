@@ -117,3 +117,51 @@ def config_stable() -> SimulationConfig:
         fairness_param=0.8,
         gauss_markov_rho=0.95,
     )
+
+
+def config_highly_variable() -> SimulationConfig:
+    """Highly variable interference: tests adaptation capability"""
+    return SimulationConfig(
+        n_stations=8,
+        n_channels=5,
+        n_time_steps=300,
+        base_interference=[0.20, 0.60, 0.15, 0.50, 0.35],
+        interference_std_factor=0.3,      # High noise
+        switch_threshold=0.03,             # Aggressive
+        min_dwell_time=3,
+        ewma_factor=0.4,
+        fairness_param=0.5,
+        gauss_markov_rho=0.4,             # Low correlation (jittery)
+    )
+
+
+def config_fairness_critical() -> SimulationConfig:
+    """Fairness-critical: uniform positions, require high fairness"""
+    return SimulationConfig(
+        n_stations=12,
+        n_channels=6,
+        n_time_steps=250,
+        base_interference=[0.12] * 6,
+        interference_std_factor=0.08,
+        switch_threshold=0.10,
+        min_dwell_time=12,
+        ewma_factor=0.25,
+        fairness_param=1.0,               # Uniform positions
+        gauss_markov_rho=0.85,
+    )
+
+
+def config_throughput_critical() -> SimulationConfig:
+    """Throughput-critical: maximize capacity with some fairness"""
+    return SimulationConfig(
+        n_stations=6,
+        n_channels=4,
+        n_time_steps=200,
+        base_interference=[0.10, 0.25, 0.15, 0.30],
+        interference_std_factor=0.12,
+        switch_threshold=0.05,
+        min_dwell_time=5,
+        ewma_factor=0.35,
+        fairness_param=0.2,               # Random positions
+        gauss_markov_rho=0.6,
+    )
