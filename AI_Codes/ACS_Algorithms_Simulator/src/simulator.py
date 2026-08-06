@@ -225,6 +225,202 @@ class AdaptiveHPF(ACSAlgorithm):
         return utilities
 
 
+class WeightedThroughputFairness(ACSAlgorithm):
+    """
+    Weighted Throughput-Fairness algorithm.
+    Combines throughput and fairness with configurable weight.
+    U = α*throughput + (1-α)*fairness_index
+    """
+
+    def __init__(self, config: SimulationConfig, alpha: float = 0.6):
+        super().__init__("Weighted TF", config)
+        self.alpha = alpha
+
+    def compute_utility(self, metrics: List) -> List[float]:
+        utilities = []
+        for m in metrics:
+            # Normalize throughput [0, 1]
+            tp_norm = m.throughput / (self.config.max_rate * self.config.n_stations + 1e-6)
+            # Fairness already in [0, 1]
+            fairness_norm = m.fairness_index
+
+            utility = self.alpha * tp_norm + (1 - self.alpha) * fairness_norm
+            utilities.append(utility)
+
+        return utilities
+
+
+class HPFWithSwitchCost(ACSAlgorithm):
+    """
+    HPF with switch cost penalty.
+    Discourages frequent switching: U_net = U_hpf - λ*switch_cost
+    Encourages stability while maintaining performance.
+    """
+
+    def __init__(self, config: SimulationConfig, lambda_switch: float = 0.1):
+        super().__init__("HPF+Cost", config)
+        self.lambda_switch = lambda_switch
+        self.alpha = 0.5
+        self.beta = 0.3
+        self.gamma = 0.2
+
+    def compute_utility(self, metrics: List) -> List[float]:
+        utilities = []
+        for i, m in enumerate(metrics):
+            # Base HPF utility
+            efficiency = m.throughput / (self.config.max_rate * self.config.n_stations + 1e-6)
+            fairness = m.fairness_index
+            min_rate_norm = m.min_rate / (self.config.max_rate + 1e-6)
+
+            base_utility = (
+                self.alpha * efficiency
+                + self.beta * fairness
+                + self.gamma * min_rate_norm
+            )
+
+            # Apply switch cost penalty if switching to this channel would be required
+            switch_cost = 0
+            if i != self.current_channel:
+                # Cost increases with number of recent switches
+                recent_switches = sum(1 for t, _ in self.switch_history if t > self.config.n_time_steps - 20)
+                switch_cost = self.lambda_switch * (1 + recent_switches / 5.0)
+
+            net_utility = base_utility - switch_cost
+            utilities.append(net_utility)
+
+        return utilities
+
+
+class AdaptiveThresholdACS(ACSAlgorithm):
+    """
+    Adaptive threshold ACS.
+    Dynamically adjusts switch threshold based on environment stability.
+    Stable environment → higher threshold (conservative)
+    Unstable environment → lower threshold (aggressive)
+    """
+
+    def __init__(self, config: SimulationConfig):
+        super().__init__("Adaptive Threshold", config)
+        self.base_threshold = config.switch_threshold
+        self.throughput_history = []
+
+    def decide_channel(self, environment: WirelessEnvironment) -> int:
+        """Override to use adaptive threshold"""
+        env_state = environment.get_state()
+        metrics = env_state.channel_metrics
+
+        # Check dwell time constraint
+        if env_state.timestep - self.last_switch_time < self.config.min_dwell_time:
+            return self.current_channel
+
+        # Compute utilities
+        utilities = self.compute_utility(metrics)
+
+        # Find best channel
+        best_channel = np.argmax(utilities)
+        current_utility = utilities[self.current_channel]
+        best_utility = utilities[best_channel]
+
+        # Adaptive threshold: based on throughput stability
+        if len(self.throughput_history) > 20:
+            recent_tp = self.throughput_history[-20:]
+            stability = 1 - (np.std(recent_tp) / (np.mean(recent_tp) + 1e-6))
+            # Stable → threshold up to 0.15, Unstable → threshold down to 0.03
+            adaptive_threshold = 0.03 + 0.12 * stability
+        else:
+            adaptive_threshold = self.base_threshold
+
+        # Apply adaptive hysteresis threshold
+        if best_channel != self.current_channel:
+            improvement = (best_utility - current_utility) / (abs(current_utility) + 1e-6)
+            if improvement > adaptive_threshold:
+                self.current_channel = best_channel
+                self.last_switch_time = env_state.timestep
+                self.switch_history.append((int(env_state.timestep), int(best_channel)))
+
+        return self.current_channel
+
+    def compute_utility(self, metrics: List) -> List[float]:
+        """Use proportional fairness utility"""
+        utilities = []
+        for m in metrics:
+            utility = np.log(m.throughput + 1.0) * m.fairness_index
+            utilities.append(utility)
+        return utilities
+
+    def step(self, environment: WirelessEnvironment):
+        """Override step to track throughput history"""
+        channel = self.decide_channel(environment)
+        environment.set_channel(channel)
+
+        current_metrics = environment.get_current_metrics()
+        self.metrics_history.append(
+            Metrics(
+                timestep=environment.timestep,
+                throughput=current_metrics.throughput,
+                min_rate=current_metrics.min_rate,
+                max_rate=current_metrics.max_rate,
+                mean_rate=current_metrics.mean_rate,
+                fairness_index=current_metrics.fairness_index,
+                current_channel=current_metrics.current_channel,
+            )
+        )
+        self.throughput_history.append(current_metrics.throughput)
+
+
+class ChannelPredictorACS(ACSAlgorithm):
+    """
+    Channel predictor algorithm.
+    Uses interference history to predict future quality.
+    Selects channel with best predicted utility.
+    """
+
+    def __init__(self, config: SimulationConfig, prediction_horizon: int = 5):
+        super().__init__("Channel Predictor", config)
+        self.prediction_horizon = prediction_horizon
+        self.interference_history = {ch: [] for ch in range(config.n_channels)}
+
+    def predict_future_metric(self, m, predicted_interference: float) -> float:
+        """Predict metric quality with predicted interference"""
+        # Assume linear degradation with interference
+        predicted_rate = m.throughput * (1 - predicted_interference)
+        return predicted_rate * m.fairness_index
+
+    def compute_utility(self, metrics: List) -> List[float]:
+        """Compute predicted utility for each channel"""
+        utilities = []
+
+        for ch, m in enumerate(metrics):
+            # Record current interference
+            # (In real implementation, we'd track actual interference per channel)
+            current_interference = self.config.base_interference[ch]
+
+            # Simple prediction: assume interference follows Gauss-Markov trend
+            if len(self.interference_history[ch]) > 1:
+                recent_interference = self.interference_history[ch][-5:]
+                trend = recent_interference[-1] - recent_interference[0] if len(recent_interference) > 1 else 0
+                predicted_interference = current_interference + trend * (self.prediction_horizon / 5)
+            else:
+                predicted_interference = current_interference
+
+            predicted_interference = np.clip(predicted_interference, 0, 1)
+
+            # Combine current quality with predicted quality
+            current_utility = np.log(m.throughput + 1.0) * m.fairness_index
+            predicted_utility = self.predict_future_metric(m, predicted_interference)
+
+            # Weight: 60% current, 40% predicted
+            utility = 0.6 * current_utility + 0.4 * predicted_utility
+            utilities.append(utility)
+
+            # Update interference history
+            self.interference_history[ch].append(current_interference)
+            if len(self.interference_history[ch]) > 50:
+                self.interference_history[ch].pop(0)
+
+        return utilities
+
+
 class PTMPSimulator:
     """
     Main headless simulator orchestrating environment and algorithms.
@@ -236,12 +432,18 @@ class PTMPSimulator:
 
         # Initialize all algorithms
         self.algorithms: Dict[str, ACSAlgorithm] = {
+            # Original algorithms
             "throughput": ThroughputMaximizer(config),
             "proportional_fair": ProportionalFair(config),
             "max_min": MaxMinFairness(config),
             "jain": JainsFairnessAlgorithm(config),
             "hpf": HybridHPF(config),
             "adaptive_hpf": AdaptiveHPF(config),
+            # New algorithm variants
+            "weighted_tf": WeightedThroughputFairness(config, alpha=0.6),
+            "hpf_switch_cost": HPFWithSwitchCost(config, lambda_switch=0.1),
+            "adaptive_threshold": AdaptiveThresholdACS(config),
+            "channel_predictor": ChannelPredictorACS(config, prediction_horizon=5),
         }
 
     def run(self, verbose: bool = False):
